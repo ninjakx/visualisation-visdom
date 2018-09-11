@@ -49,7 +49,7 @@ vis.heatmap(
 
   vis._send({'data': trace, 'layout': layout, 'win': 'XYCURVE','update':'append'})
   ```
-  <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/line_trace.PNG" width="400" height="400">
+<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/trace_loop.PNG" width="400" height="400">
   
 ### OR
 
@@ -86,7 +86,7 @@ vis.heatmap(
 
 vis._send({'data': [trace1, trace2, trace3, trace4, trace5, trace6, trace7], 'layout': layout, 'win': 'XYCURVE','update':'append'})
 ```
-<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/trace_loop.PNG" width="400" height="400">
+<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/line_trace.PNG" width="400" height="400">
 
 ```
 vis_line = vis.line(X = np.array([1,2,3]), Y = np.array([[1,1,1],[2,2,4],[3,4,7]]), win="my_line")
