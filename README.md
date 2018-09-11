@@ -21,8 +21,10 @@ vis.heatmap(
         )
     )
 ```
+![Conf_Matrix](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/heatmap.png)
 
-## Line(CUSTOM)
+
+## Line(Custom)
   ```
   X = [[] for i in range(7)]
   Y = [[] for i in range(7)]
@@ -46,6 +48,7 @@ vis.heatmap(
 
   vis._send({'data': trace, 'layout': layout, 'win': 'XYCURVE','update':'append'})
   ```
+  ![Line](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/line_trace.PNG)
   
 ### OR
 
@@ -82,10 +85,13 @@ vis.heatmap(
 
 vis._send({'data': [trace1, trace2, trace3, trace4, trace5, trace6, trace7], 'layout': layout, 'win': 'XYCURVE','update':'append'})
 ```
+![Trace](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/trace_loop.PNG)
 
 ```
 vis_line = vis.line(X = np.array([1,2,3]), Y = np.array([[1,1,1],[2,2,4],[3,4,7]]), win="my_line")
 ```
+![Line](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/my_line.PNG)
+
 
 ## Multiple Lines
 
@@ -117,9 +123,9 @@ def plot_combine(name,d):
         )
 for i in [1,2,3,4,5,6]:
   d = {'class-1': [i+1,i*3] ,'class-2': [i*4,i+2]}
-  plot_combine("combined_Lines",d)  
-        
+  plot_combine("combined_Lines",d)     
 ```
+![Combined_lines](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/combined_lines.PNG)
 
 ## Multiple Lines(custom)
 
@@ -187,13 +193,15 @@ def combined_plot():
   vis._send({'data': data, 'win': win, 'eid': env, 'layout': layout, 'opts': opts})
 combined_plot()
 ```
+![combined_lines](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/combined_plot_custom.PNG)
 
 ## Image
 ```
 img = np.random.rand(3, 512, 256)
 vis.images(img, win="IMG", opts=dict(title="IMAGE"))
-                       
 ```
+
+![Img](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/Img.PNG)
 
 ## Multiple Images
 ```
@@ -203,6 +211,9 @@ imgs =  np.random.random((4, 3, 128, 128))*255
         opts=dict(title='Random Images', caption='How random.')
     )
 ```
+
+![Imgs](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/imgs.PNG)
+
 ## Matplotlib
 ```
 import matplotlib.pyplot as plt
@@ -211,6 +222,8 @@ plt.title("Line")
 plt.ylabel('some numbers')
 vis.matplot(plt)
 ```
+
+![Matplotlib](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/matplotlib.PNG)
 
 ## Scatter Plots
 ```
@@ -225,6 +238,8 @@ vis.matplot(plt)
     )
 ```
 
+![Scatter Plots](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/2D_scatter_plot.PNG)
+
 ## Pie Chart
 ```
     # pie chart
@@ -234,3 +249,5 @@ vis.matplot(plt)
         opts=dict(legend=['A','B','C','D'])
     )
 ```
+
+![Pie Chart](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/pie_chart.PNG)
