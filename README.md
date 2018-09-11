@@ -224,7 +224,7 @@ plt.ylabel('some numbers')
 vis.matplot(plt)
 ```
 
-![Matplotlib](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/matplotlib.PNG)
+<img src = "https://github.com/ninjakx/visualisation-visdom/blob/master/Images/matplotlib.PNG" width="300" height="300">
 
 ## Scatter Plots
 ```
