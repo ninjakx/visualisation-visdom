@@ -185,5 +185,21 @@ def combined_plot():
   opts = {}
 
   vis._send({'data': data, 'win': win, 'eid': env, 'layout': layout, 'opts': opts})
-  
+combined_plot()
+```
+
+## Image
+```
+img = np.random.rand(3, 512, 256)
+vis.images(img, win="IMG", opts=dict(title="IMAGE"))
+                       
+```
+
+## Matplotlib
+```
+import matplotlib.pyplot as plt
+plt.plot([1, 23, 2, 4])
+plt.title("Line")
+plt.ylabel('some numbers')
+vis.matplot(plt)
 ```
