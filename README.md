@@ -3,7 +3,7 @@ Making plots using visdom
 
 
 ## Heatmaps
-`
+```
 vis = visdom.Visdom(port='6002')
 import torchnet as tnt
 import torch 
@@ -21,4 +21,4 @@ vis.heatmap(
             colormap='Electric',
         )
     )
-`
+```
