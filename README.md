@@ -126,7 +126,8 @@ for i in [1,2,3,4,5,6]:
   d = {'class-1': [i+1,i*3] ,'class-2': [i*4,i+2]}
   plot_combine("combined_Lines",d)     
 ```
-![Combined_lines](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/combined_lines.PNG)
+<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/combined_lines.PNG" width="400" height="400">
+
 
 ## Multiple Lines(custom)
 
@@ -194,7 +195,8 @@ def combined_plot():
   vis._send({'data': data, 'win': win, 'eid': env, 'layout': layout, 'opts': opts})
 combined_plot()
 ```
-![combined_lines](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/combined_plot_custom.PNG)
+<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/combined_plot_custom.PNG" width="400" height="400">
+
 
 ## Image
 ```
@@ -224,7 +226,7 @@ plt.ylabel('some numbers')
 vis.matplot(plt)
 ```
 
-<img src = "https://github.com/ninjakx/visualisation-visdom/blob/master/Images/matplotlib.PNG" width="300" height="300">
+<img src = "https://github.com/ninjakx/visualisation-visdom/blob/master/Images/matplotlib.PNG" width="500" height="400">
 
 ## Scatter Plots
 ```
