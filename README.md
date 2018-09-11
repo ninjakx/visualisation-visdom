@@ -21,7 +21,8 @@ vis.heatmap(
         )
     )
 ```
-![Conf_Matrix](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/heatmap.png){:height="300px" width="300px"}
+
+<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/heatmap.png" width="300" height="300">
 
 
 ## Line(Custom)
