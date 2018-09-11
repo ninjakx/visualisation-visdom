@@ -195,11 +195,42 @@ vis.images(img, win="IMG", opts=dict(title="IMAGE"))
                        
 ```
 
+## Multiple Images
+```
+imgs =  np.random.random((4, 3, 128, 128))*255
+  vis.images(
+        imgs,
+        opts=dict(title='Random Images', caption='How random.')
+    )
+```
 ## Matplotlib
 ```
 import matplotlib.pyplot as plt
-plt.plot([1, 23, 2, 4])
+plt.plot([1, 7, 2, 4])
 plt.title("Line")
 plt.ylabel('some numbers')
 vis.matplot(plt)
+```
+
+## Scatter Plots
+```
+    # 2D scatterplot with custom intensities (red channel)
+    vis.scatter(
+        X=np.random.rand(255, 2),
+        Y=(np.random.rand(255) + 1.5).astype(int),
+        opts=dict(
+            markersize=10,
+            markercolor=np.random.randint(0, 255, (2, 3,)),
+        ),
+    )
+```
+
+## Pie Chart
+```
+    # pie chart
+    X = np.asarray([10, 22, 13, 52])
+    vis.pie(
+        X=X,
+        opts=dict(legend=['A','B','C','D'])
+    )
 ```
