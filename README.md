@@ -49,7 +49,7 @@ vis.heatmap(
 
   vis._send({'data': trace, 'layout': layout, 'win': 'XYCURVE','update':'append'})
   ```
-  <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/line_trace.PNG" width="500" height="500">
+  <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/line_trace.PNG" width="400" height="400">
   
 ### OR
 
