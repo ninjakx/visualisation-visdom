@@ -124,5 +124,66 @@ for i in [1,2,3,4,5,6]:
 ## Multiple Lines(custom)
 
 ```
+def combined_plot():
+  x = [0,1,2,3,4]
+  data = [{
+                'x': x,
+                'y': list(map(lambda i: i, x)),
+                'marker':{
+                        'color': 'red',
+                        'symbol': 104,
+                        'size': "10"},
+                'mode':"markers+lines",
+                
+                'name':'class-1',
+                'type':'line',
+},{
+                'x': x,
+                'y': list(map(lambda i: i*2, x)),
+                'marker':{
+                        'color': 'green',
+                        'symbol': 104,
+                        'size': "10"},
+                'mode':"markers+lines",
+                'name':'class-2',
+                'type':'line',
+  },
+{
+                'x': x,
+                'y': list(map(lambda i: i*3, x)),
+                'marker':{
+                        'color': 'blue',
+                        'symbol': 104,
+                        'size': "10"},
+                'mode':"markers+lines",
+                'name':'class-3',
+                'type':'line',
+  }
+     ,
+  {
+                'x': x,
+                'y': list(map(lambda i: i*4, x)),
+                'marker':{
+                        'color': 'green',
+                        'symbol': 104,
+                        'size': "10"},
+                'mode':"markers+lines",
+                'name':'class-3',
+                'type':'line',
+  }
+  
+  ]
 
+  win = 'custom_multiple_lines'
+  env = 'main'
+
+  layout= {
+                'title':"combined_plot",
+                'xaxis':{'title':'x1'},
+                'yaxis':{'title':'x2'}
+  }
+  opts = {}
+
+  vis._send({'data': data, 'win': win, 'eid': env, 'layout': layout, 'opts': opts})
+  
 ```
