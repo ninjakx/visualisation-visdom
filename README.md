@@ -3,7 +3,7 @@ Making plots using visdom
 
 
 ## Heatmaps
-It is used to realise the Confusion Matrix. The diagonal elements in the matrix represent the number of correctly classified classes but in the case of visdom plotter you will have lower diagonal which corresponds to the no of correctly classified classes.
+It is used to realise the Confusion Matrix. The diagonal elements in the matrix represent the number of correctly classified classes but in the case of visdom plotter you will have lower diagonal for it.
 
 Without Flipping(lower diagonal will correspond to correctly classified classes)
 ```
