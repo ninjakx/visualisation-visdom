@@ -3,6 +3,9 @@ Making plots using visdom
 
 
 ## Heatmaps
+It is used to realise the Confusion Matrix. The diagonal elements in the matrix represent the number of correctly classified classes but in the case of visdom plotter you will have lower diagonal which corresponds to the no of correctly classified classes.
+
+Without Flipping(lower diagonal will correspond to correctly classified classes)
 ```
 import torchnet as tnt
 confusion_matrix = tnt.meter.ConfusionMeter(3) # 3 classes 
@@ -23,6 +26,22 @@ vis.heatmap(
 ```
 
 <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/heatmap.png" width="300" height="300">
+
+With Flipping(upper diagonal will correspond to correctly classified classes)
+Replace the above with the below code. 
+
+```
+    vis.heatmap(
+        X=np.flipud(confusion_matrix.value()),  # Flip the matrix 
+        opts=dict(
+            columnnames=['a', 'b', 'c'],
+            rownames=['c', 'b', 'a'],    # change the order of labels
+            colormap='Electric',
+        )
+    )
+```
+
+![Fliped_heatmap](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/fliped_heatmap.png)
 
 
 ## Line(Custom)
