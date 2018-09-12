@@ -6,7 +6,7 @@ Making plots using visdom
 It is used to realise the Confusion Matrix. The diagonal elements in the matrix represent the number of correctly classified classes but in the case of visdom plotter you will have lower diagonal for it.
 
 Without Flipping(lower diagonal will correspond to correctly classified classes)
-```
+```python
 import torchnet as tnt
 confusion_matrix = tnt.meter.ConfusionMeter(3) # 3 classes 
 y_actu = np.array([2, 2, 1, 2, 0, 2, 1])
@@ -30,7 +30,7 @@ vis.heatmap(
 With Flipping(upper diagonal will correspond to correctly classified classes)
 Replace the above with the below code. 
 
-```
+```python
     vis.heatmap(
         X=np.flipud(confusion_matrix.value()),  # Flip the matrix 
         opts=dict(
@@ -44,7 +44,7 @@ Replace the above with the below code.
 <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/flip_heatmap.PNG" width="300" height="300">
 
 ## Line(Custom)
-  ```
+  ```python
   X = [[] for i in range(7)]
   Y = [[] for i in range(7)]
   trace=[]
@@ -71,7 +71,7 @@ Replace the above with the below code.
   
 ### OR
 
-```
+```python
   trace1 = dict(x=[1,3,5,7], y=[1,3,5,7], marker={'color': 'red', 'symbol': 5, 'size': "10"},
                           mode="markers+lines",
                          name='class-1', type="custom")
@@ -106,7 +106,7 @@ vis._send({'data': [trace1, trace2, trace3, trace4, trace5, trace6, trace7], 'la
 ```
 <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/line_trace.PNG" width="400" height="400">
 
-```
+```python
 vis_line = vis.line(X = np.array([1,2,3]), Y = np.array([[1,1,1],[2,2,4],[3,4,7]]), win="my_line")
 ```
 ![Line](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/my_line.PNG)
@@ -114,7 +114,7 @@ vis_line = vis.line(X = np.array([1,2,3]), Y = np.array([[1,1,1],[2,2,4],[3,4,7]
 
 ## Multiple Lines
 
-```
+```python
 def plot_combine(name,d):
         #index = {}
         #multiple plots in one single graph
@@ -149,7 +149,7 @@ for i in [1,2,3,4,5,6]:
 
 ## Multiple Lines(custom)
 
-```
+```python
 def combined_plot():
   x = [0,1,2,3,4]
   data = [{
@@ -217,7 +217,7 @@ combined_plot()
 
 
 ## Image
-```
+```python
 img = np.random.rand(3, 512, 256)
 vis.images(img, win="IMG", opts=dict(title="IMAGE"))
 ```
@@ -225,7 +225,7 @@ vis.images(img, win="IMG", opts=dict(title="IMAGE"))
 ![Img](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/Img.PNG)
 
 ## Multiple Images
-```
+```python
 imgs =  np.random.random((4, 3, 128, 128))*255
   vis.images(
         imgs,
@@ -236,7 +236,7 @@ imgs =  np.random.random((4, 3, 128, 128))*255
 ![Imgs](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/imgs.PNG)
 
 ## Matplotlib
-```
+```python
 import matplotlib.pyplot as plt
 plt.plot([1, 7, 2, 4])
 plt.title("Line")
@@ -247,7 +247,7 @@ vis.matplot(plt)
 <img src = "https://github.com/ninjakx/visualisation-visdom/blob/master/Images/matplotlib.PNG" width="500" height="400">
 
 ## Scatter Plots
-```
+```python
     # 2D scatterplot with custom intensities (red channel)
     vis.scatter(
         X=np.random.rand(255, 2),
@@ -262,7 +262,7 @@ vis.matplot(plt)
 ![Scatter Plots](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/2D_scatter_plot.PNG)
 
 ## Pie Chart
-```
+```python
     # pie chart
     X = np.asarray([10, 22, 13, 52])
     vis.pie(
