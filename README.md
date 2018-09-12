@@ -41,8 +41,7 @@ Replace the above with the below code.
     )
 ```
 
-![Fliped_heatmap](https://github.com/ninjakx/visualisation-visdom/blob/master/Images/flip_heatmap.png)
-
+<img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/flip_heatmap.PNG" width="300" height="300">
 
 ## Line(Custom)
   ```
