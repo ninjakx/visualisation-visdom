@@ -28,6 +28,7 @@ vis.heatmap(
 <img src="https://github.com/ninjakx/visualisation-visdom/blob/master/Images/heatmap.png" width="300" height="300">
 
 With Flipping(upper diagonal will correspond to correctly classified classes)
+
 Replace the above with the below code. 
 
 ```python
